@@ -27,6 +27,7 @@ html, textarea{
     font-style: normal;
     font-variation-settings:
     "slnt" 0;
+    background-color: var(--light-blue-100);
 }
 header .logo{
     margin: 2rem 1.5rem;
@@ -37,7 +38,7 @@ form textarea{
     margin: 0 auto;
     border: none;
     resize: none;
-    height: 40rem;
+    height: 30rem;
     padding: 5rem 0;
     font-size: 3.2rem;
     color: var(--dark-blue-300);
@@ -51,7 +52,7 @@ form textarea::placeholder{
 form .aviso{
     display: flex;
     align-items: center;
-    margin: 2.5rem 1.5rem;
+    margin:1.2rem;
     font-size: 1.2rem;
     color: var(--gray-400);
 }
@@ -68,11 +69,13 @@ form .aviso{
 }
 .btn{
     width: 100%;
+    font-size: 1.6rem;
     padding: 2rem 1rem;
     border-radius: 2rem;
     border: 0.1rem solid var(--dark-blue-300);
     color: var(--dark-blue-300);
     cursor: pointer;
+    background-color: var(--light-blue-100);
 }
 .encriptar{
     background-color: var(--dark-blue-300);
@@ -85,6 +88,7 @@ form .aviso{
     justify-content: space-around;
     height: 12rem;
     width: 75%;
+    background-color: #fff;
     margin: 0 auto 4rem;
     padding: 1.5rem;
     border-radius: 2.5rem;
