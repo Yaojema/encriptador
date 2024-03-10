@@ -23,3 +23,20 @@
 header .logo{
     margin: 2rem 1.5rem;
 }
+form textarea{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    resize: none;
+    height: 40rem;
+    padding: 5rem 0;
+    font-size: 3.2rem;
+    color: var(--dark-blue-300);
+}
+form textarea:focus{
+    outline: none;
+}
+form textarea::placeholder{
+    color: var(--dark-blue-200);
+}
