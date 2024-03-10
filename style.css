@@ -17,7 +17,9 @@
     --gray-300: #868E96;
     --gray-400: #495057;
     --gray-500: #343A40;
+    /* 1 rem = 10px */
+    font-size: 62.5%;
 }
-p {
-    color: var(--redd);
+header .logo{
+    margin: 2rem 1.5rem;
 }
