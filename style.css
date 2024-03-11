@@ -122,3 +122,26 @@ form .aviso{
     width: 80%;
 }
 /* media */
+@media screen and (min-width: 768px) {
+    .botones{
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .botones .btn:first-child{
+        margin-right: 2rem;
+    }
+    .btn{
+        /* max-width: 50%; */
+        width: 50%;
+    }
+    .mensajes, .resultados{
+        width: 93%;
+    }
+    .resultados{
+        min-height: 30rem;
+    }
+    .btn-copiar{
+        width: 95%;
+    }
+}
