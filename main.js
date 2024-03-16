@@ -1,3 +1,18 @@
+/** Uso del DOM */
+const texto = document.querySelector('.texto');
+const mensaje = document.querySelector('.resultados-texto');
+const aviso = document.querySelector('.mensajes');
+const resultados = document.querySelector('.resultados');
+
+function btnEncriptar(mode = true){
+    const textoManipulado = encriptar(texto.value, mode);
+    mensaje.innerHTML = textoManipulado;
+    texto.innerHTML = "";
+    aviso.style.display = "none";
+    resultados.style.display = "flex";
+}
+
+/** Logica de encriptar */
 // true = encriptar
 // false = desencriptar
 function encriptar(msg, isEnc = true){
@@ -13,21 +28,15 @@ function encriptar(msg, isEnc = true){
         for (let i = 0; i < matriz.length; i++) { 
             // Verifica si el mensaje tiene la vocal actual de la interacción [a-e-i-o-u]
                 if(msg.includes(matriz[i][0])){
-                // console.log("ACA: " + matriz[i][0]);
                 // Reemplaza la coincidencia
                 msg = msg.replaceAll(matriz[i][0], matriz[i][1]);
-                // console.log("ACA2: " + matriz[i][1]);
             }
-            // console.log('Encriptado');
         }
     } else {
         for (let i = 0; i < matriz.length; i++) {
-            // Verifica si el mensaje tiene el patron actual de la interacion
             if(msg.includes(matriz[i][1])){
-                // Reemplaza la coincidencia
                 msg = msg.replaceAll(matriz[i][1], matriz[i][0]);
             }
-            // console.log('Desencriptado: Times');
         }
     }
     return msg
@@ -41,5 +50,5 @@ console.log(
 );
 console.log(
     'Desencriptado: '+
-    encriptar('mufatrcimesenterlaigober', false)+""
+    encriptar('mufatrcimesenterlaigober', false)
 );
