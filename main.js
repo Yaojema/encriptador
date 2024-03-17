@@ -11,12 +11,14 @@ const textarea = document.querySelector('.texto');
 textarea.addEventListener('input', function() {
     // Obtener el valor actual del textarea
     let texto = textarea.value;
-    // Convertir el texto a minúsculas, sin caracteres especiales
-    texto = texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    texto = texto.toLowerCase().replace(/[^a-z\s]/g, '');
-    texto = texto.trimStart();
-    // Actualizar el valor del textarea con el texto en minúsculas
-    textarea.value = texto;
+    setTimeout(() => {
+        // Convertir el texto a minúsculas, sin caracteres especiales
+        texto = texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        texto = texto.toLowerCase().replace(/[^a-z\s]/g, '');
+        texto = texto.trimStart();
+        // Actualizar el valor del textarea con el texto en minúsculas
+        textarea.value = texto;    
+    }, 50);
 });
 
 
