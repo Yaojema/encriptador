@@ -11,11 +11,25 @@ function btnEncriptar(mode = true){
     aviso.style.display = "none";
     resultados.style.display = "flex";
 }
-
-const borrado = document.querySelector('.titulo');
-function drop(){
-    borrado.innerHTML = "";
+// funcion de copiado al portapapeles
+async function copiarContenido(){
+    try {
+        await navigator.clipboard.writeText(mensaje.innerHTML);
+        console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+        console.error('Error al copiar: ', err);
+    }
 }
+    // const copiarContenido = async () => {
+    // try {
+    //     await navigator.clipboard.writeText(mensaje.innerHTML);
+    //     console.log('Contenido copiado al portapapeles');
+    // } catch (err) {
+    //     console.error('Error al copiar: ', err);
+    // }
+    // }
+
+
 /** Logica de encriptar */
 // true = encriptar
 // false = desencriptar
