@@ -5,7 +5,7 @@ const aviso = document.querySelector('.mensajes');
 const resultados = document.querySelector('.resultados');
 
 function btnEncriptar(mode = true){
-    const textoManipulado = encriptar(texto.value, mode);
+    const textoManipulado = encriptar(normalizar(texto.value), mode);
     mensaje.innerHTML = textoManipulado;
     texto.value = "";
     aviso.style.display = "none";
@@ -20,6 +20,11 @@ async function copiarContenido(){
         console.error('Error al copiar: ', err);
     }
 }
+// quita acentos diacríticos y los vuelve en minúsculas 
+function normalizar(text){
+    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
     // const copiarContenido = async () => {
     // try {
     //     await navigator.clipboard.writeText(mensaje.innerHTML);
