@@ -7,11 +7,15 @@ const resultados = document.querySelector('.resultados');
 function btnEncriptar(mode = true){
     const textoManipulado = encriptar(texto.value, mode);
     mensaje.innerHTML = textoManipulado;
-    texto.innerHTML = "";
+    texto.value = "";
     aviso.style.display = "none";
     resultados.style.display = "flex";
 }
 
+const borrado = document.querySelector('.titulo');
+function drop(){
+    borrado.innerHTML = "";
+}
 /** Logica de encriptar */
 // true = encriptar
 // false = desencriptar
