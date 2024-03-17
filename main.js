@@ -4,6 +4,22 @@ const mensaje = document.querySelector('.resultados-texto');
 const aviso = document.querySelector('.mensajes');
 const resultados = document.querySelector('.resultados');
 
+// Seleccionar el elemento textarea
+const textarea = document.querySelector('.texto');
+
+// Agregar un event listener para el evento input
+textarea.addEventListener('input', function() {
+    // Obtener el valor actual del textarea
+    let texto = textarea.value;
+    // Convertir el texto a minúsculas, sin caracteres especiales
+    texto = texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    texto = texto.toLowerCase().replace(/[^a-z\s]/g, '');
+    texto = texto.trimStart();
+    // Actualizar el valor del textarea con el texto en minúsculas
+    textarea.value = texto;
+});
+
+
 function btnEncriptar(mode = true){
     const textoManipulado = encriptar(normalizar(texto.value), mode);
     mensaje.innerHTML = textoManipulado;
@@ -22,7 +38,17 @@ async function copiarContenido(){
 }
 // quita acentos diacríticos y los vuelve en minúsculas 
 function normalizar(text){
-    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    let normalizado = textarea.value;
+    normalizado = normalizado.toLowerCase().replace(/[^a-z\s]/g, '');
+    normalizado = normalizado.trimStart();
+    normalizado = normalizado.trimStart();
+    if (normalizado.trim() === '') {
+        // Si el texto es vacío, establecer un mensaje predeterminado en placeholder
+        textarea.placeholder = 'Por favor, ingresa un texto.';
+        return;
+    }
+    return normalizado;
+    // return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
     // const copiarContenido = async () => {
