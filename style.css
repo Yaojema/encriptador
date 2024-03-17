@@ -63,7 +63,7 @@ form .aviso{
     display: flex;
     flex-direction: column;
     margin: 0 1.5rem 4rem;
-    height: 14rem;
+    height: 11rem;
     align-items: center;
     justify-content: space-between;
 }
