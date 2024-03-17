@@ -7,3 +7,4 @@ Este proyecto se encargará de encriptar y desencriptar mensajes:
 - Se crea el media query para **desktop**.
 - Se crea la lógica inicial del proyecto
 - Se usa el DOM
+- Se completa funcionalidades de copiar, quitar acentos y mayúsculas
