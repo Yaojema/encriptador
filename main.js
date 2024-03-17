@@ -72,6 +72,7 @@ function encriptar(msg, isEnc = true){
         ['o','ober'],
         ['u','ufat'],
     ];
+    // jaimenters -> james != ja
     if(isEnc){
         // recorre la matriz 5 veces - 0-4
         for (let i = 0; i < matriz.length; i++) { 
@@ -82,6 +83,7 @@ function encriptar(msg, isEnc = true){
             }
         }
     } else {
+        matriz.reverse();
         for (let i = 0; i < matriz.length; i++) {
             if(msg.includes(matriz[i][1])){
                 msg = msg.replaceAll(matriz[i][1], matriz[i][0]);
