@@ -63,7 +63,7 @@ form .aviso{
     display: flex;
     flex-direction: column;
     margin: 0 1.5rem 4rem;
-    height: 11rem;
+    height: 14rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -142,7 +142,6 @@ footer{
     justify-content: space-evenly;
 }
 .icons img, .icons svg{
-    /* background-color: red; */
     object-fit: cover;
     width: 2.5rem;
 }
@@ -176,12 +175,10 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1, 1fr;
         margin: -6rem 2rem -2.5rem 10rem;
-        /* grid-column-gap: 1rem; */
-        /* grid-row-gap: 1rem; */
     }
-    /* .main {
-        margin-bottom: 0;
-    } */
+    .botones{
+        height: 11rem;
+    }
     .textarea { 
         grid-area: 1 / 1 / 2 / 3;
         padding: 10rem 2rem 0;
