@@ -29,8 +29,16 @@ html, textarea{
     "slnt" 0;
     background-color: var(--light-blue-100);
 }
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 header .logo{
     margin: 2rem 1.5rem;
+}
+.oscuro img{
+    width: 4rem;
 }
 form textarea{
     width: 90%;
